@@ -9,7 +9,7 @@ const client = new Client({
 // Bot Prefix
 const prefix = "+";
 
-// Logging when the bot is online and start sending prayers
+// Logging when the bot is online
 client.on("ready", () => {
     console.log(`Ready as > ${client.user.username}`);
 });
@@ -18,7 +18,7 @@ client.on("ready", () => {
 // Questions file
 let questions = require("./questions.json")
 
-// for Cooldown
+// for Cooldown, allowing 1 round at the moment 
 let cooldown = new Set()
 
 client.on("messageCreate", async message => {
